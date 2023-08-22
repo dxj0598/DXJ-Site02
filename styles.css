@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.music-box {
+    width: 200px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.music-box:hover {
+    transform: scale(1.05);
+}
+
+.now-playing {
+    width: 250px;
+    height: 330px;
+    position: relative;
+}
+
+.album-cover {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.song-title {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lyrics, .next-lyrics {
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOut 10s linear infinite;
+    transition: opacity 0.5s ease;
+    margin-top: 5px;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
